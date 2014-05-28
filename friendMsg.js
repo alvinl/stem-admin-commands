@@ -4,7 +4,7 @@ module.exports = function (steamID, rawMessage, messageType) {
   var Stem     = this,
       bot      = this.bot,
       command  = rawMessage.toLowerCase(),
-      isAdmin  = this.utils.isAdmin(steamID),
+      isAdmin  = this.api.isAdmin(steamID),
       commands = rawMessage.toLowerCase().split(' ');
 
   // Ignore `is typing` messages
