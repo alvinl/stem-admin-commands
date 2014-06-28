@@ -12,6 +12,6 @@ Stem admin commands
 - `set status <status>` Changes the bots status
   - Statuses: `online`, `away`, `busy`, `snooze`, `tradeready`, `playready`
 - `set botname <bot name>` Changes the bots display name
-- `enable / disable trading` Changes the bots trading state
+- `toggle trading <enable / disable>` Changes the bots trading state
 - `version` Displays the bots version
 - `log off` Logs the bot off
