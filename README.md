@@ -3,7 +3,7 @@ Stem admin commands
 
 ### Installation
 
-1. `npm install git://github.com/alvinlz/stem-admin-commands.git`
+1. `npm install git://github.com/alvinl/stem-admin-commands.git`
 2. Add `"stem-admin-commands": {}` to plugins.json
 
 ### Commands

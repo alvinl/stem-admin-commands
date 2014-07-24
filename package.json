@@ -1,6 +1,6 @@
 {
   "name": "stem-admin-commands",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Admin commands plugin for Stem",
   "main": "index.js",
   "author": "Alvin Lazaro <me@alvinl.com>",
