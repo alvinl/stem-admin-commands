@@ -3,7 +3,7 @@ exports.help = function (steamID) {
 
   var Stem = this;
 
-  Stem.bot.sendMessage(steamID, 'Admin Commands:' + 
+  Stem.bot.sendMessage(steamID, 'Admin Commands:' +
                                 '\n - set status <online, busy, tradeready, away, snooze, playready>' +
                                 '\n - set botname <bot name>' +
                                 '\n - toggle trading <enable / disable>' +
@@ -12,10 +12,10 @@ exports.help = function (steamID) {
 
 };
 
-exports.setStatus = function (steamID, args) {
-  
+exports.setStatus = function (steamID, command) {
+
   var Stem   = this,
-      status = args[0];
+      status = command.match[1];
 
   var validStatuses = {
 
@@ -39,10 +39,10 @@ exports.setStatus = function (steamID, args) {
 
 };
 
-exports.setBotname = function (steamID, args) {
-  
+exports.setBotname = function (steamID, command) {
+
   var Stem    = this,
-      botName = args.join(' ');
+      botName = command.match[1];
 
   // No bot name given
   if (!botName)
@@ -55,10 +55,10 @@ exports.setBotname = function (steamID, args) {
 
 };
 
-exports.toggleTrading = function (steamID, args) {
+exports.toggleTrading = function (steamID, command) {
 
   var Stem          = this,
-      tradeStatus   = args[0],
+      tradeStatus   = command.match[1],
       validStatuses = ['enable', 'disable'];
 
   if (tradeStatus) {
@@ -87,7 +87,7 @@ exports.toggleTrading = function (steamID, args) {
 exports.version = function (steamID) {
 
   var Stem = this;
-  
+
   Stem.bot.sendMessage(steamID, 'Stem v' + this.version);
 
 };
@@ -95,7 +95,7 @@ exports.version = function (steamID) {
 exports.logOff = function () {
 
   var Stem = this;
-  
+
   Stem.bot.setPersonaState(0);
 
   Stem.bot.logOff();
